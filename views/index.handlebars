@@ -3,19 +3,20 @@
 <h2> Burgers I want to eat!!!</h2>
 
 <ul>
-    {{#each burgers}}
+    {{#each burger}}
         {{#unless is_devoured}}
-            {{> burgers/burger-block is_devoured=false}}
+            {{> burger/burger-block is_devoured}}
         {{/unless}}
+        
     {{/each}}
 </ul>
 
 <h2>Burgers I already ate!!!</h2>
 
 <ul>
-    {{#each burgers}}
+    {{#each burger}}
         {{#if is_devoured}}
-            {{> burgers/burger is_devoured=true}}
+           {{> burger/burger-block is_devoured}}
         {{/if}}
     {{/each}}
 </ul>
@@ -27,7 +28,7 @@
         <input type='text' id='burger' name='name'>
     </div>
     <div class='group-form'>
-        <label for='devoured'>Ate them all?</label>
+        <label for='devoured'>Choose:</label>
         <br>
         <input type='radio' name='devoured' value='1' checked> Devoured! 
         <br>
