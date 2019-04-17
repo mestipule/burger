@@ -1,7 +1,12 @@
-li {
+body{
+background-color: #ccffb3;
+}
+.lists{
     padding: 5px;
-    margin: 5px;
-    background: #faebd7;
+    margin-top: 15px;
+    width: 50%;
+    text-align: center;
+    background: white;
   }
   
   .label {
@@ -17,4 +22,14 @@ li {
   .group-form {
     margin-bottom: 5px;
   }
-  
+  #burger-title{
+  text-align: right;
+  font-size: 70px;
+  color: #734d26;
+  }
+  .container .burger-title{
+  background-image: url("/assets/images/burgers.png");
+  background-repeat: repeat;
+  width: 50%;
+  align-content: center;
+  }

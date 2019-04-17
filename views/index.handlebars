@@ -1,25 +1,35 @@
-<h1>Burgers</h1>
+<div class="container">
+  <h1 id = "burger-title">Burgers</h1>
+</div>
 
+
+
+
+
+
+
+
+<div class="container" id="burgerIWantToEat">
 <h2> Burgers I want to eat!!!</h2>
-
-<ul>
-    {{#each burger}}
-        {{#unless is_devoured}}
-            {{> burger/burger-block is_devoured}}
-        {{/unless}}
-        
-    {{/each}}
-</ul>
-
-<h2>Burgers I already ate!!!</h2>
-
-<ul>
-    {{#each burger}}
-        {{#if is_devoured}}
-           {{> burger/burger-block is_devoured}}
-        {{/if}}
-    {{/each}}
-</ul>
+    <ul>
+        {{#each burger}}
+            {{#unless is_devoured}}
+                {{> burger/burger-block }}
+            {{/unless}}
+            
+        {{/each}}
+    </ul>
+</div>
+<div class="container" id="burgerIAlreadyAte">
+    <h2>Burgers I already ate!!!</h2>
+    <ul>
+        {{#each burger}}
+            {{#if is_devoured}}
+            {{> burger/burger-block }}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
 
 <h2>Add a Burger</h2>
 <form class='create-form'>

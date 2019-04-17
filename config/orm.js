@@ -20,7 +20,7 @@ function objToSql(ob) {
             if (typeof value === 'string' && value.indexOf(' ') >= 0) {
                 value = "'" + value + "'";
             }
-            arr.push(key + '=' + values);
+            arr.push(key + '=' + value);
         }
     }
     return arr.toString();
@@ -59,7 +59,7 @@ var orm = {
         queryString += ' SET ';
         queryString += objToSql(objColVals);
         queryString += ' WHERE ';
-        queryString += CSSConditionRule;
+        queryString += condtion;
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {

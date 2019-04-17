@@ -5,10 +5,18 @@ $(function() {
         var newBurgerState = {
             is_devoured: newBurger
         };
+        var idDev = 
+        {
+            id: id
+        }
 
-        $.ajax('/api/burgers/' + id, {
+        console.log("onclick devoure", id)
+
+        $.ajax('/api/burgers/', {
+
             type: 'PUT',
-            data: newBurgerState
+           // data: newBurgerState
+           data: idDev
         }).then(
             function() {
                 console.log('burger devoured', newBurgerState);
@@ -24,7 +32,7 @@ $(function() {
             is_devoured: $('[name=devoured]:checked').val().trim()
         };
 
-        $.ajax('/api/burgers/', {
+        $.ajax('/api/burgers', {
             type: 'POST',
             data: newBurger
         }).then(
